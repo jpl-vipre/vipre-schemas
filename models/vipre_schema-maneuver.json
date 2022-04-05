@@ -1,6 +1,6 @@
 {
   "tablename": "maneuver",
-  "note": "\"Store maneuvers used on approach to target body. Can include carrier divert manuevers",
+  "note": "\"Store maneuvers used on approach to target body. Can include carrier divert maneuvers",
   "fields": [
     {
       "field_name": "id",

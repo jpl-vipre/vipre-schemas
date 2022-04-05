@@ -77,7 +77,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "x component of incoming flyby v_inifinity [km/s]"
+      "description": "x component of incoming flyby v_infinity [km/s]"
     },
     {
       "field_name": "v_inf_in_y",
@@ -88,7 +88,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "y component of incoming flyby v_inifinity [km/s]"
+      "description": "y component of incoming flyby v_infinity [km/s]"
     },
     {
       "field_name": "v_inf_in_z",
@@ -99,7 +99,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "z component of incoming flyby v_inifinity [km/s]"
+      "description": "z component of incoming flyby v_infinity [km/s]"
     },
     {
       "field_name": "v_inf_out_x",
@@ -110,7 +110,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "x component of outgoing flyby v_inifinity [km/s]"
+      "description": "x component of outgoing flyby v_infinity [km/s]"
     },
     {
       "field_name": "v_inf_out_y",
@@ -121,7 +121,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "y component of outgoing flyby v_inifinity [km/s]"
+      "description": "y component of outgoing flyby v_infinity [km/s]"
     },
     {
       "field_name": "v_inf_out_z",
@@ -132,7 +132,7 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "z component of outgoing flyby v_inifinity [km/s]"
+      "description": "z component of outgoing flyby v_infinity [km/s]"
     }
   ]
 }

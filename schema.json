@@ -1,0 +1,255 @@
+{
+  "$id": "https://github.jpl.nasa.gov/raw/VIPRE/vipre-schemas/main/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "default": {},
+  "description": "The schema for defining data models to be used by the VIPRE application",
+  "examples": [
+    {
+      "tablename": "architecture",
+      "note": "Categorization of trajectories based on the flyby bodies and order in the interplanetary trajectory",
+      "fields": [
+        {
+          "field_name": "id",
+          "key": "PK",
+          "short_name": "Architecture ID",
+          "datatype_range": "int(0-1000)",
+          "sql_datatype": "INTEGER",
+          "example_value": "6",
+          "filtering": "checkbox (optional)",
+          "computable": "n/a",
+          "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+        },
+        {
+          "field_name": "sequence",
+          "key": "",
+          "short_name": "Flyby Sequence",
+          "datatype_range": "varchar(255)",
+          "sql_datatype": "TEXT",
+          "example_value": "\"599-599-699\"",
+          "filtering": "checkbox (optional, unlikely to be needed)",
+          "computable": "no",
+          "description": "SQL body IDs of the flybys in order"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "tablename",
+    "fields"
+  ],
+  "title": "VIPRE data schema",
+  "type": "object",
+  "properties": {
+    "tablename": {
+      "$id": "#/properties/tablename",
+      "default": "",
+      "description": "The name of the table in vipre-db which holds data conforming to the data model.",
+      "examples": [
+        "architecture"
+      ],
+      "title": "Tablename",
+      "type": "string"
+    },
+    "note": {
+      "$id": "#/properties/note",
+      "default": "A note about the data defined by this model",
+      "description": "An explanation about the purpose of this instance.",
+      "examples": [
+        "Categorization of trajectories based on the flyby bodies and order in the interplanetary trajectory"
+      ],
+      "title": "Note",
+      "type": "string"
+    },
+    "fields": {
+      "$id": "#/properties/fields",
+      "default": [],
+      "description": "A set of fields that are included in the data model. Each field contains descriptive information about a particular attribute on the data model.",
+      "examples": [
+        [
+          {
+            "field_name": "id",
+            "key": "PK",
+            "short_name": "Architecture ID",
+            "datatype_range": "int(0-1000)",
+            "sql_datatype": "INTEGER",
+            "example_value": "6",
+            "filtering": "checkbox (optional)",
+            "computable": "n/a",
+            "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+          },
+          {
+            "field_name": "sequence",
+            "key": "",
+            "short_name": "Flyby Sequence",
+            "datatype_range": "varchar(255)",
+            "sql_datatype": "TEXT",
+            "example_value": "\"599-599-699\"",
+            "filtering": "checkbox (optional, unlikely to be needed)",
+            "computable": "no",
+            "description": "SQL body IDs of the flybys in order"
+          }
+        ]
+      ],
+      "title": "Fields",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/fields/items",
+        "default": {},
+        "description": "A field available on the data model; maps to an attribute on the ORM model or a column in the database.",
+        "examples": [
+          [
+            {
+              "field_name": "id",
+              "key": "PK",
+              "short_name": "Architecture ID",
+              "datatype_range": "int(0-1000)",
+              "sql_datatype": "INTEGER",
+              "example_value": "6",
+              "filtering": "checkbox (optional)",
+              "computable": "n/a",
+              "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+            },
+            {
+              "field_name": "sequence",
+              "key": "",
+              "short_name": "Flyby Sequence",
+              "datatype_range": "varchar(255)",
+              "sql_datatype": "TEXT",
+              "example_value": "\"599-599-699\"",
+              "filtering": "checkbox (optional, unlikely to be needed)",
+              "computable": "no",
+              "description": "SQL body IDs of the flybys in order"
+            }
+          ]
+        ],
+        "required": [
+          "field_name",
+          "short_name",
+          "sql_datatype"
+        ],
+        "title": "Field",
+        "type": "object",
+        "properties": {
+          "field_name": {
+            "$id": "#/properties/fields/items/properties/field_name",
+            "default": "",
+            "description": "The identifier of this field on the data object or the name of the column in the database.",
+            "examples": [
+              "id"
+            ],
+            "title": "Programmatic field name",
+            "type": "string"
+          },
+          "key": {
+            "$id": "#/properties/fields/items/properties/key",
+            "default": "",
+            "description": "The type of key for which this field is used; e.g. foreign or primary key.",
+            "enum": [
+              "PK",
+              "FK",
+              ""
+            ],
+            "examples": [
+              "PK"
+            ],
+            "title": "Key usage",
+            "type": "string"
+          },
+          "short_name": {
+            "$id": "#/properties/fields/items/properties/short_name",
+            "default": "",
+            "description": "A short name used for displaying this field to users",
+            "examples": [
+              "Architecture ID"
+            ],
+            "title": "Short name",
+            "maxItems": 0,
+            "type": "string"
+          },
+          "datatype_range": {
+            "$id": "#/properties/fields/items/properties/datatype_range",
+            "default": "",
+            "description": "The data type captured by this field and an estimated range of values",
+            "examples": [
+              "int(0-1000)"
+            ],
+            "title": "Datatype range",
+            "type": "string"
+          },
+          "sql_datatype": {
+            "$id": "#/properties/fields/items/properties/sql_datatype",
+            "default": "",
+            "description": "The SQL type used to capture values of this field.",
+            "enum": [
+              "STRING",
+              "TEXT",
+              "INTEGER",
+              "REAL"
+            ],
+            "examples": [
+              "INTEGER"
+            ],
+            "title": "SQL datatype",
+            "type": "string"
+          },
+          "example_value": {
+            "$id": "#/properties/fields/items/properties/example_value",
+            "default": "",
+            "description": "An example of a value captured by this field",
+            "examples": [
+              "6",
+              6,
+              6.0
+            ],
+            "title": "Example value",
+            "type": [
+              "string",
+              "number",
+              "integer"
+            ]
+          },
+          "filtering": {
+            "$id": "#/properties/fields/items/properties/filtering",
+            "default": "",
+            "description": "Captures whether this field is used for filtering data in the application or database",
+            "examples": [
+              "checkbox (optional)"
+            ],
+            "title": "Filtering needs",
+            "type": "string"
+          },
+          "computable": {
+            "$id": "#/properties/fields/items/properties/computable",
+            "default": "",
+            "description": "Whether this field is computable on the backend (on-the-fly) or will only be kept in the database (pre-computed).",
+            "examples": [
+              "n/a",
+              "no",
+              "yes"
+            ],
+            "title": "Computable",
+            "enum": [
+              "n/a",
+              "no",
+              "yes"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "$id": "#/properties/fields/items/properties/description",
+            "default": "",
+            "description": "A description of the data captured by this field.",
+            "examples": [
+              "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+            ],
+            "title": "Description",
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

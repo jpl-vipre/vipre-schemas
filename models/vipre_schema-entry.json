@@ -170,7 +170,7 @@
     {
       "field_name": "pos_sun_entry_z",
       "key": "",
-      "short_name": "Sun Position @ entryl Z",
+      "short_name": "Sun Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "REAL",
       "example_value": "-134323986",

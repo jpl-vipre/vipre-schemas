@@ -10,7 +10,7 @@
       "sql_datatype": "INTEGER",
       "example_value": "599",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "SQL body ID. Plan to use Horizons ID as this value to save space"
     },
     {
@@ -21,7 +21,7 @@
       "sql_datatype": "TEXT",
       "example_value": "Jupiter",
       "filtering": "checkbox (target - default, flyby - optional)",
-      "computable": "n",
+      "computable": "no",
       "description": "name of body"
     },
     {
@@ -32,7 +32,7 @@
       "sql_datatype": "REAL",
       "example_value": "6378.1366",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "mean radius of body [km]"
     },
     {
@@ -43,7 +43,7 @@
       "sql_datatype": "REAL",
       "example_value": "126686531.9",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "gravity parameter [km^3/s^2]"
     },
     {
@@ -54,7 +54,7 @@
       "sql_datatype": "REAL",
       "example_value": "1.02595676",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "body rotational period [days]"
     },
     {
@@ -65,7 +65,7 @@
       "sql_datatype": "REAL",
       "example_value": "0.1224",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "x component of body spin pole unit vector represented in EMO2000 frame"
     },
     {
@@ -76,7 +76,7 @@
       "sql_datatype": "REAL",
       "example_value": "-0.0310",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "y component of body spin pole unit vector represented in EMO2000 frame"
     },
     {
@@ -87,7 +87,7 @@
       "sql_datatype": "REAL",
       "example_value": "0.9920",
       "filtering": "n/a",
-      "computable": "n",
+      "computable": "no",
       "description": "z component of body spin pole unit vector represented in EMO2000 frame"
     }
   ]
