@@ -6,12 +6,13 @@
       "field_name": "id",
       "key": "PK",
       "short_name": "Entry ID",
-      "datatype_range": "int(0-100000)",
+      "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
       "example_value": "1",
       "filtering": "n/a",
       "computable": "n/a",
-      "description": "ID of the Entry row in the database"
+      "description": "ID of the Entry row in the database",
+      "units": ""
     },
     {
       "field_name": "body_id",
@@ -22,7 +23,8 @@
       "example_value": "599",
       "filtering": "n/a",
       "computable": "n/a",
-      "description": "ID of the parent Body in the database"
+      "description": "ID of the parent Body in the database",
+      "units": ""
     },
     {
       "field_name": "trajectory_id",
@@ -33,7 +35,8 @@
       "example_value": "4",
       "filtering": "n/a",
       "computable": "no",
-      "description": "ID of the parent Trajectory in the database"
+      "description": "ID of the parent Trajectory in the database",
+      "units": ""
     },
     {
       "field_name": "bvec_theta",
@@ -44,7 +47,8 @@
       "example_value": "3.456",
       "filtering": "slider (optional)",
       "computable": "yes",
-      "description": "Angle on B-plane  for target arrival [rad]"
+      "description": "Angle on B-plane  for target arrival [rad]",
+      "units": "rad"
     },
     {
       "field_name": "bvec_mag",
@@ -55,7 +59,8 @@
       "example_value": "9750.123",
       "filtering": "slider (optional)",
       "computable": "yes",
-      "description": "Radial distance from body origin for target arrival [km]"
+      "description": "Radial distance from body origin for target arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "safe",
@@ -66,18 +71,20 @@
       "example_value": "1",
       "filtering": "default exclude",
       "computable": "no",
-      "description": "Flag indicating whether trajectory avoids unsafe conditions (ring impact, etc)"
+      "description": "Flag indicating whether trajectory avoids unsafe conditions (ring impact, etc)",
+      "units": ""
     },
     {
       "field_name": "t_entry",
       "key": "",
       "short_name": "Time of Entry",
-      "datatype_range": "real(0-36500.000)",
-      "sql_datatype": "REAL",
-      "example_value": "10611.823",
+      "datatype_range": "int(0-3153600000)",
+      "sql_datatype": "INTEGER",
+      "example_value": "916861248",
       "filtering": "slider (optional)",
       "computable": "no",
-      "description": "Time of atmospheric entry in days past J2000"
+      "description": "Time of atmospheric entry in seconds past J2000",
+      "units": "seconds"
     },
     {
       "field_name": "pos_entry_x",
@@ -88,7 +95,8 @@
       "example_value": "3903113883",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
-      "description": "x component of spacecraft position at time of entry [km]"
+      "description": "x component of spacecraft position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_entry_y",
@@ -99,7 +107,8 @@
       "example_value": "2155580575",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
-      "description": "y component of spacecraft position at time of entry [km]"
+      "description": "y component of spacecraft position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_entry_z",
@@ -110,7 +119,8 @@
       "example_value": "-134323986",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
-      "description": "z component of spacecraft position at time of entry [km]"
+      "description": "z component of spacecraft position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "vel_entry_x",
@@ -121,7 +131,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
-      "description": "x component of spacecraft relative entry velocity at time of entry [km]"
+      "description": "x component of spacecraft relative entry velocity at time of entry [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "vel_entry_y",
@@ -132,7 +143,8 @@
       "example_value": "10.656459",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
-      "description": "y component of spacecraft relative entry velocity  at time of entry [km]"
+      "description": "y component of spacecraft relative entry velocity  at time of entry [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "vel_entry_z",
@@ -143,7 +155,8 @@
       "example_value": "-0.652681",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
-      "description": "z component of spacecraft relative entry velocity at time of entry [km]"
+      "description": "z component of spacecraft relative entry velocity at time of entry [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "pos_sun_entry_x",
@@ -154,7 +167,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": "x component of sun position at time of entry [km]"
+      "description": "x component of sun position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_sun_entry_y",
@@ -165,7 +179,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": "y component of sun position at time of entry [km]"
+      "description": "y component of sun position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_sun_entry_z",
@@ -176,7 +191,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": "z component of sun position at time of entry [km]"
+      "description": "z component of sun position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_earth_entry_x",
@@ -187,7 +203,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": "x component of Earth position at time of entry [km]"
+      "description": "x component of Earth position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_earth_entry_y",
@@ -198,7 +215,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": "y component of Earth position at time of entry [km]"
+      "description": "y component of Earth position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_earth_entry_z",
@@ -209,7 +227,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": "z component of Earth position at time of entry [km]"
+      "description": "z component of Earth position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_entry_x",
@@ -220,7 +239,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": "x component of target position at time of entry [km]"
+      "description": "x component of target position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_entry_y",
@@ -231,7 +251,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": "y component of target position at time of entry [km]"
+      "description": "y component of target position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_entry_z",
@@ -242,7 +263,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": "z component of target position at time of entry [km]"
+      "description": "z component of target position at time of entry [km]",
+      "units": "km"
     },
     {
       "field_name": "relay_volume",
@@ -253,7 +275,8 @@
       "example_value": "???",
       "filtering": "slider (optional)",
       "computable": "no",
-      "description": "Total data volume relayable by entry vehicle. Nullable"
+      "description": "Total data volume relayable by entry vehicle. Nullable",
+      "units": ""
     }
   ]
 }

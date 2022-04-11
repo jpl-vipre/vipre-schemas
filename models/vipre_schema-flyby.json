@@ -11,7 +11,8 @@
       "example_value": "1",
       "filtering": "n/a",
       "computable": "no",
-      "description": "ID of the Flyby row in database"
+      "description": "ID of the Flyby row in database",
+      "units": ""
     },
     {
       "field_name": "trajectory_id",
@@ -22,7 +23,8 @@
       "example_value": "4",
       "filtering": "n/a",
       "computable": "no",
-      "description": "SQL trajectory ID"
+      "description": "SQL trajectory ID",
+      "units": ""
     },
     {
       "field_name": "body_id",
@@ -33,7 +35,8 @@
       "example_value": "599",
       "filtering": "checkbox (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "SQL body ID of flyby body"
+      "description": "SQL body ID of flyby body",
+      "units": ""
     },
     {
       "field_name": "order",
@@ -44,18 +47,20 @@
       "example_value": "1",
       "filtering": "n/a",
       "computable": "no",
-      "description": "Order of this flyby in trajectory's flyby sequence"
+      "description": "Order of this flyby in trajectory's flyby sequence",
+      "units": ""
     },
     {
       "field_name": "t_flyby",
       "key": "",
       "short_name": "Flyby date",
-      "datatype_range": "real(0-36500.000)",
-      "sql_datatype": "REAL",
-      "example_value": "10611.823",
+      "datatype_range": "int(0-3153600000)",
+      "sql_datatype": "INTEGER",
+      "example_value": "916861248",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "Time of flyby in days past J2000"
+      "description": "Time of flyby in seconds past J2000",
+      "units": "seconds"
     },
     {
       "field_name": "altitude",
@@ -66,7 +71,8 @@
       "example_value": "349000.000",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "Altitude above flyby body surface at flyby hyperbola periapsis [km]"
+      "description": "Altitude above flyby body surface at flyby hyperbola periapsis [km]",
+      "units": "km"
     },
     {
       "field_name": "v_inf_in_x",
@@ -77,7 +83,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "x component of incoming flyby v_infinity [km/s]"
+      "description": "x component of incoming flyby v_infinity [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_in_y",
@@ -88,7 +95,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "y component of incoming flyby v_infinity [km/s]"
+      "description": "y component of incoming flyby v_infinity [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_in_z",
@@ -99,7 +107,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "z component of incoming flyby v_infinity [km/s]"
+      "description": "z component of incoming flyby v_infinity [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_out_x",
@@ -110,7 +119,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "x component of outgoing flyby v_infinity [km/s]"
+      "description": "x component of outgoing flyby v_infinity [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_out_y",
@@ -121,7 +131,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "y component of outgoing flyby v_infinity [km/s]"
+      "description": "y component of outgoing flyby v_infinity [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_out_z",
@@ -132,7 +143,8 @@
       "example_value": "20.971509",
       "filtering": "slider (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "z component of outgoing flyby v_infinity [km/s]"
+      "description": "z component of outgoing flyby v_infinity [km/s]",
+      "units": "km/s"
     }
   ]
 }

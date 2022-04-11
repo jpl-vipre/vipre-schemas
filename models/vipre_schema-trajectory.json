@@ -11,7 +11,8 @@
       "example_value": "4",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "SQL trajectory ID",
+      "units": ""
     },
     {
       "field_name": "body_id",
@@ -22,7 +23,8 @@
       "example_value": "599",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "SQL body ID",
+      "units": ""
     },
     {
       "field_name": "architecture_id",
@@ -33,29 +35,32 @@
       "example_value": "3",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "SQL architecture ID",
+      "units": ""
     },
     {
       "field_name": "t_launch",
       "key": "",
       "short_name": "Launch date",
-      "datatype_range": "real(0-36500.000)",
-      "sql_datatype": "REAL",
-      "example_value": "10158.751",
+      "datatype_range": "int(0-3153600000)",
+      "sql_datatype": "INTEGER",
+      "example_value": "877716086",
       "filtering": "slider (default)",
       "computable": "no",
-      "description": ""
+      "description": "Time of launch in seconds past J2000",
+      "units": "seconds"
     },
     {
       "field_name": "t_arr",
       "key": "",
       "short_name": "Arrival date",
-      "datatype_range": "real(0-36500.000)",
-      "sql_datatype": "REAL",
-      "example_value": "10611.823",
+      "datatype_range": "int(0-3153600000)",
+      "sql_datatype": "INTEGER",
+      "example_value": "916861248",
       "filtering": "slider (default)",
       "computable": "no",
-      "description": ""
+      "description": "Time of target arrival in seconds past J2000",
+      "units": "seconds"
     },
     {
       "field_name": "v_inf_arr_x",
@@ -66,7 +71,8 @@
       "example_value": "20.971509",
       "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
-      "description": ""
+      "description": "x component of interplanetary arrival velocity at target [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_arr_y",
@@ -75,9 +81,10 @@
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "REAL",
       "example_value": "10.656459",
-      "filtering": "^",
+      "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
-      "description": ""
+      "description": "y component of interplanetary arrival velocity at target [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "v_inf_arr_z",
@@ -86,9 +93,10 @@
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "REAL",
       "example_value": "-0.652681",
-      "filtering": "^",
+      "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
-      "description": ""
+      "description": "z component of interplanetary arrival velocity at target [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "c3",
@@ -99,7 +107,8 @@
       "example_value": "10.584471",
       "filtering": "slider (default)",
       "computable": "no",
-      "description": ""
+      "description": "Characteristic energy of launch [km^2/s^2]",
+      "units": "km^2/s^2"
     },
     {
       "field_name": "dv_total",
@@ -110,7 +119,8 @@
       "example_value": "2.8846701",
       "filtering": "slider (default)",
       "computable": "no",
-      "description": ""
+      "description": "total DeltaV required for interplanetary trajectory [km/s]",
+      "units": "km/s"
     },
     {
       "field_name": "pos_earth_arr_x",
@@ -121,7 +131,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "x component of Earth position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_earth_arr_y",
@@ -132,7 +143,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "y component of Earth position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_earth_arr_z",
@@ -143,7 +155,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "z component of Earth position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_sc_arr_x",
@@ -154,7 +167,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "x component of spacecraft position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_sc_arr_y",
@@ -165,7 +179,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "y component of spacecraft position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_sc_arr_z",
@@ -176,7 +191,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "z component of spacecraft position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_arr_x",
@@ -187,7 +203,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "x component of target position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_arr_y",
@@ -198,7 +215,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "y component of target position at time of arrival [km]",
+      "units": "km"
     },
     {
       "field_name": "pos_target_arr_z",
@@ -209,7 +227,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
-      "description": ""
+      "description": "z component of target position at time of arrival [km]",
+      "units": "km"
     }
   ]
 }

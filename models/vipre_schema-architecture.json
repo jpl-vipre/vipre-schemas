@@ -6,23 +6,25 @@
       "field_name": "id",
       "key": "PK",
       "short_name": "Architecture ID",
-      "datatype_range": "int(0-1000)",
+      "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
       "example_value": "6",
       "filtering": "checkbox (optional)",
       "computable": "n/a",
-      "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+      "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory",
+      "units": ""
     },
     {
       "field_name": "sequence",
       "key": "",
       "short_name": "Flyby Sequence",
-      "datatype_range": "varchar(255)",
+      "datatype_range": "text",
       "sql_datatype": "TEXT",
       "example_value": "\"599-599-699\"",
       "filtering": "checkbox (optional, unlikely to be needed)",
       "computable": "no",
-      "description": "SQL body IDs of the flybys in order"
+      "description": "SQL body IDs of the flybys in order",
+      "units": ""
     }
   ]
 }

@@ -6,23 +6,25 @@
       "field_name": "id",
       "key": "PK",
       "short_name": "Maneuver ID",
-      "datatype_range": "text",
-      "sql_datatype": "TEXT",
+      "datatype_range": "Sequence",
+      "sql_datatype": "INTEGER",
       "example_value": "1",
       "filtering": "n/a",
       "computable": "n/a",
-      "description": "ID of the Maneuver row in database"
+      "description": "ID of the Maneuver row in database",
+      "units": ""
     },
     {
       "field_name": "entry_id",
       "key": "FK",
       "short_name": "Entry ID",
-      "datatype_range": "text",
-      "sql_datatype": "TEXT",
+      "datatype_range": "int",
+      "sql_datatype": "INTEGER",
       "example_value": "1",
       "filtering": "n/a",
       "computable": "n/a",
-      "description": "ID of the parent Entry row in database"
+      "description": "ID of the parent Entry row in database",
+      "units": ""
     },
     {
       "field_name": "maneuver_type",
@@ -33,7 +35,8 @@
       "example_value": "orbiter separation",
       "filtering": "checkbox (optional)",
       "computable": "yes",
-      "description": "Type of maneuver performed to separate from entry vehicle. Nullable"
+      "description": "Type of maneuver performed to separate from entry vehicle. Nullable",
+      "units": ""
     },
     {
       "field_name": "dv_maneuver",
@@ -44,7 +47,8 @@
       "example_value": "10.656459",
       "filtering": "slider (optional)",
       "computable": "yes",
-      "description": "Delta V of separation maneuver [km/s]. Nullable"
+      "description": "Delta V of separation maneuver [km/s]. Nullable",
+      "units": "km/s"
     },
     {
       "field_name": "pos_man_x",
@@ -55,7 +59,8 @@
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "x component of spacecraft position at time of maneuver [km]. Nullable"
+      "description": "x component of spacecraft position at time of maneuver [km]. Nullable",
+      "units": "km"
     },
     {
       "field_name": "pos_man_y",
@@ -66,7 +71,8 @@
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "y component of spacecraft position at time of maneuver [km]. Nullable"
+      "description": "y component of spacecraft position at time of maneuver [km]. Nullable",
+      "units": "km"
     },
     {
       "field_name": "pos_man_z",
@@ -77,7 +83,8 @@
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "z component of spacecraft position at time of maneuver [km]. Nullable"
+      "description": "z component of spacecraft position at time of maneuver [km]. Nullable",
+      "units": "km"
     },
     {
       "field_name": "vel_man_x",
@@ -88,7 +95,8 @@
       "example_value": "20.971509",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "x component of spacecraft velocity at time of maneuver [km]. Nullable"
+      "description": "x component of spacecraft velocity at time of maneuver [km/s]. Nullable",
+      "units": "km/s"
     },
     {
       "field_name": "vel_man_y",
@@ -99,7 +107,8 @@
       "example_value": "10.656459",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "y component of spacecraft velocity at time of maneuver [km]. Nullable"
+      "description": "y component of spacecraft velocity at time of maneuver [km/s]. Nullable",
+      "units": "km/s"
     },
     {
       "field_name": "vel_man_z",
@@ -110,7 +119,8 @@
       "example_value": "-0.652681",
       "filtering": "n/a",
       "computable": "yes",
-      "description": "z component of spacecraft velocity at time of maneuver [km]. Nullable"
+      "description": "z component of spacecraft velocity at time of maneuver [km/s]. Nullable",
+      "units": "km/s"
     }
   ]
 }

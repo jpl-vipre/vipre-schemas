@@ -245,9 +245,19 @@
             ],
             "title": "Description",
             "type": "string"
+          },
+          "units": {
+            "$id": "#/properties/fields/items/properties/units",
+            "default": "",
+            "description": "The units used to measure the field's value where applicable.",
+            "examples": [
+              "km/s"
+            ],
+            "title": "Units",
+            "type": "string"
           }
         },
-        "additionalProperties": true
+        "additionalProperties": false
       }
     }
   },
