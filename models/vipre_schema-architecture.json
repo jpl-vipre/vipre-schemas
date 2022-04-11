@@ -12,7 +12,11 @@
       "filtering": "checkbox (optional)",
       "computable": "n/a",
       "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": true,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "sequence",
@@ -24,7 +28,11 @@
       "filtering": "checkbox (optional, unlikely to be needed)",
       "computable": "no",
       "description": "SQL body IDs of the flybys in order",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     }
   ]
 }

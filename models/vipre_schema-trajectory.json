@@ -12,7 +12,11 @@
       "filtering": "n/a",
       "computable": "no",
       "description": "SQL trajectory ID",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": true,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "body_id",
@@ -24,7 +28,11 @@
       "filtering": "n/a",
       "computable": "no",
       "description": "SQL body ID",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "body.id",
+      "indexed": true
     },
     {
       "field_name": "architecture_id",
@@ -36,7 +44,11 @@
       "filtering": "n/a",
       "computable": "no",
       "description": "SQL architecture ID",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "architecture.id",
+      "indexed": true
     },
     {
       "field_name": "t_launch",
@@ -48,7 +60,11 @@
       "filtering": "slider (default)",
       "computable": "no",
       "description": "Time of launch in seconds past J2000",
-      "units": "seconds"
+      "units": "seconds",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "t_arr",
@@ -60,175 +76,262 @@
       "filtering": "slider (default)",
       "computable": "no",
       "description": "Time of target arrival in seconds past J2000",
-      "units": "seconds"
+      "units": "seconds",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "v_inf_arr_x",
       "key": "",
       "short_name": "Arrival V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "20.971509",
       "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
       "description": "x component of interplanetary arrival velocity at target [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "v_inf_arr_y",
       "key": "",
       "short_name": "Arrival V infinity Vector Y",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "10.656459",
       "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
       "description": "y component of interplanetary arrival velocity at target [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "v_inf_arr_z",
       "key": "",
       "short_name": "Arrival V infinity Vector Z",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-0.652681",
       "filtering": "slider on magnitude of v infinity arrival (optional)",
       "computable": "no",
       "description": "z component of interplanetary arrival velocity at target [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "c3",
       "key": "",
       "short_name": "Launch C3",
       "datatype_range": "real (0-500.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "10.584471",
       "filtering": "slider (default)",
       "computable": "no",
       "description": "Characteristic energy of launch [km^2/s^2]",
-      "units": "km^2/s^2"
+      "units": "km^2/s^2",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "dv_total",
       "key": "",
       "short_name": "Total Cruise DeltaV",
       "datatype_range": "real (0-100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2.8846701",
       "filtering": "slider (default)",
       "computable": "no",
       "description": "total DeltaV required for interplanetary trajectory [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "pos_earth_arr_x",
       "key": "",
       "short_name": "Earth Position @ Arrival X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of Earth position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_earth_arr_y",
       "key": "",
       "short_name": "Earth Position @ Arrival Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of Earth position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_earth_arr_z",
       "key": "",
       "short_name": "Earth Position @ Arrival Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of Earth position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_sc_arr_x",
       "key": "",
       "short_name": "Spacecraft Position @ Arrival X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of spacecraft position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_sc_arr_y",
       "key": "",
       "short_name": "Spacecraft Position @ Arrival Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of spacecraft position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_sc_arr_z",
       "key": "",
       "short_name": "Spacecraft Position @ Arrival Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of spacecraft position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_arr_x",
       "key": "",
       "short_name": "Target Position @ Arrival X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of target position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_arr_y",
       "key": "",
       "short_name": "Target Position @ Arrival Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of target position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_arr_z",
       "key": "",
       "short_name": "Target Position @ Arrival Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of target position at time of arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_name": "target_body",
+      "model_name": "Body",
+      "back_populates": "trajectories"
+    },
+    {
+      "relationship_name": "architecture",
+      "model_name": "Architecture"
+    },
+    {
+      "relationship_name": "entries",
+      "model_name": "Entry",
+      "back_populates": "trajectory"
+    },
+    {
+      "relationship_name": "occultations",
+      "model_name": "Occultation",
+      "back_populates": "trajectory"
+    },
+    {
+      "relationship_name": "flybys",
+      "model_name": "Flyby",
+      "back_populates": "trajectory",
+      "order_by": "Flyby.order"
     }
   ]
 }

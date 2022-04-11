@@ -1,7 +1,6 @@
 {
   "$id": "https://github.jpl.nasa.gov/raw/VIPRE/vipre-schemas/main/schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
-  "default": {},
   "description": "The schema for defining data models to be used by the VIPRE application",
   "examples": [
     {
@@ -33,21 +32,24 @@
       ]
     }
   ],
-  "required": [
-    "tablename",
-    "fields"
-  ],
+  "required": ["tablename", "fields"],
   "title": "VIPRE data schema",
   "type": "object",
   "properties": {
     "tablename": {
       "$id": "#/properties/tablename",
-      "default": "",
+      "default": "tablename",
       "description": "The name of the table in vipre-db which holds data conforming to the data model.",
-      "examples": [
-        "architecture"
-      ],
+      "examples": ["architecture"],
       "title": "Tablename",
+      "type": "string"
+    },
+    "model_name": {
+      "$id": "#/properties/model_name",
+      "default": "ModelName",
+      "description": "The name of the model used programmatically in the application.",
+      "examples": ["Architecture"],
+      "title": "Model Name",
       "type": "string"
     },
     "note": {
@@ -62,7 +64,19 @@
     },
     "fields": {
       "$id": "#/properties/fields",
-      "default": [],
+      "default": [
+        {
+          "field_name": "id",
+          "key": "PK",
+          "short_name": "Model ID",
+          "datatype_range": "int(0-1000)",
+          "sql_datatype": "INTEGER",
+          "example_value": "6",
+          "filtering": "n/a",
+          "computable": "n/a",
+          "description": "SQL ID for this model"
+        }
+      ],
       "description": "A set of fields that are included in the data model. Each field contains descriptive information about a particular attribute on the data model.",
       "examples": [
         [
@@ -95,49 +109,51 @@
       "additionalItems": true,
       "items": {
         "$id": "#/properties/fields/items",
-        "default": {},
+        "default": {
+          "field_name": "id",
+          "key": "PK",
+          "short_name": "Model ID",
+          "datatype_range": "int(0-1000)",
+          "sql_datatype": "INTEGER",
+          "example_value": "6",
+          "filtering": "n/a",
+          "computable": "n/a",
+          "description": "SQL ID for this model"
+        },
         "description": "A field available on the data model; maps to an attribute on the ORM model or a column in the database.",
         "examples": [
-          [
-            {
-              "field_name": "id",
-              "key": "PK",
-              "short_name": "Architecture ID",
-              "datatype_range": "int(0-1000)",
-              "sql_datatype": "INTEGER",
-              "example_value": "6",
-              "filtering": "checkbox (optional)",
-              "computable": "n/a",
-              "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
-            },
-            {
-              "field_name": "sequence",
-              "key": "",
-              "short_name": "Flyby Sequence",
-              "datatype_range": "varchar(255)",
-              "sql_datatype": "TEXT",
-              "example_value": "\"599-599-699\"",
-              "filtering": "checkbox (optional, unlikely to be needed)",
-              "computable": "no",
-              "description": "SQL body IDs of the flybys in order"
-            }
-          ]
+          {
+            "field_name": "id",
+            "key": "PK",
+            "short_name": "Architecture ID",
+            "datatype_range": "int(0-1000)",
+            "sql_datatype": "INTEGER",
+            "example_value": "6",
+            "filtering": "checkbox (optional)",
+            "computable": "n/a",
+            "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+          },
+          {
+            "field_name": "sequence",
+            "key": "",
+            "short_name": "Flyby Sequence",
+            "datatype_range": "varchar(255)",
+            "sql_datatype": "TEXT",
+            "example_value": "\"599-599-699\"",
+            "filtering": "checkbox (optional, unlikely to be needed)",
+            "computable": "no",
+            "description": "SQL body IDs of the flybys in order"
+          }
         ],
-        "required": [
-          "field_name",
-          "short_name",
-          "sql_datatype"
-        ],
+        "required": ["field_name", "short_name", "sql_datatype"],
         "title": "Field",
         "type": "object",
         "properties": {
           "field_name": {
             "$id": "#/properties/fields/items/properties/field_name",
-            "default": "",
+            "default": "field_name",
             "description": "The identifier of this field on the data object or the name of the column in the database.",
-            "examples": [
-              "id"
-            ],
+            "examples": ["id"],
             "title": "Programmatic field name",
             "type": "string"
           },
@@ -145,24 +161,16 @@
             "$id": "#/properties/fields/items/properties/key",
             "default": "",
             "description": "The type of key for which this field is used; e.g. foreign or primary key.",
-            "enum": [
-              "PK",
-              "FK",
-              ""
-            ],
-            "examples": [
-              "PK"
-            ],
+            "enum": ["PK", "FK", ""],
+            "examples": ["PK"],
             "title": "Key usage",
             "type": "string"
           },
           "short_name": {
             "$id": "#/properties/fields/items/properties/short_name",
-            "default": "",
+            "default": "Short Name",
             "description": "A short name used for displaying this field to users",
-            "examples": [
-              "Architecture ID"
-            ],
+            "examples": ["Architecture ID"],
             "title": "Short name",
             "maxItems": 0,
             "type": "string"
@@ -171,25 +179,16 @@
             "$id": "#/properties/fields/items/properties/datatype_range",
             "default": "",
             "description": "The data type captured by this field and an estimated range of values",
-            "examples": [
-              "int(0-1000)"
-            ],
+            "examples": ["int(0-1000)"],
             "title": "Datatype range",
             "type": "string"
           },
           "sql_datatype": {
             "$id": "#/properties/fields/items/properties/sql_datatype",
-            "default": "",
+            "default": "TEXT",
             "description": "The SQL type used to capture values of this field.",
-            "enum": [
-              "STRING",
-              "TEXT",
-              "INTEGER",
-              "REAL"
-            ],
-            "examples": [
-              "INTEGER"
-            ],
+            "enum": ["STRING", "TEXT", "INTEGER", "REAL", "FLOAT"],
+            "examples": ["INTEGER"],
             "title": "SQL datatype",
             "type": "string"
           },
@@ -197,25 +196,15 @@
             "$id": "#/properties/fields/items/properties/example_value",
             "default": "",
             "description": "An example of a value captured by this field",
-            "examples": [
-              "6",
-              6,
-              6.0
-            ],
+            "examples": ["6", 6, 6.0],
             "title": "Example value",
-            "type": [
-              "string",
-              "number",
-              "integer"
-            ]
+            "type": ["string", "number", "integer"]
           },
           "filtering": {
             "$id": "#/properties/fields/items/properties/filtering",
             "default": "",
             "description": "Captures whether this field is used for filtering data in the application or database",
-            "examples": [
-              "checkbox (optional)"
-            ],
+            "examples": ["checkbox (optional)"],
             "title": "Filtering needs",
             "type": "string"
           },
@@ -223,17 +212,9 @@
             "$id": "#/properties/fields/items/properties/computable",
             "default": "",
             "description": "Whether this field is computable on the backend (on-the-fly) or will only be kept in the database (pre-computed).",
-            "examples": [
-              "n/a",
-              "no",
-              "yes"
-            ],
+            "examples": ["n/a", "no", "yes"],
             "title": "Computable",
-            "enum": [
-              "n/a",
-              "no",
-              "yes"
-            ],
+            "enum": ["n/a", "no", "yes"],
             "type": "string"
           },
           "description": {
@@ -250,10 +231,132 @@
             "$id": "#/properties/fields/items/properties/units",
             "default": "",
             "description": "The units used to measure the field's value where applicable.",
-            "examples": [
-              "km/s"
-            ],
+            "examples": ["km/s"],
             "title": "Units",
+            "type": "string"
+          },
+          "primary_key": {
+            "$id": "#/properties/fields/items/properties/primary_key",
+            "default": false,
+            "description": "True if the field is used as a primary key in the database.",
+            "examples": [true, false],
+            "title": "Primary Key",
+            "type": "boolean"
+          },
+          "foreign_key": {
+            "$id": "#/properties/fields/items/properties/foreign_key",
+            "default": "",
+            "description": "Reference to a `table.column` if this field is used as a foreign key in the database; empty otherwise",
+            "examples": ["architecture.id", ""],
+            "title": "Foreign Key",
+            "type": "string"
+          },
+          "indexed": {
+            "$id": "#/properties/fields/items/properties/indexed",
+            "default": false,
+            "description": "True if the field is indexed in the database.",
+            "examples": [true, false],
+            "title": "Indexed",
+            "type": "boolean"
+          },
+          "nullable": {
+            "$id": "#/properties/fields/items/properties/nullable",
+            "default": false,
+            "description": "True if the field is allowed null values in the database.",
+            "examples": [true, false],
+            "title": "Nullable",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "relationships": {
+      "$id": "#/properties/relationships",
+      "default": [
+        {
+          "relationship_name": "relationship",
+          "model_name": "Model",
+          "back_populates": ""
+        }
+      ],
+      "description": "A set of relationships attached to this entity referring to other entities in the data model.",
+      "examples": [
+        [
+          {
+            "relationship_name": "trajectory",
+            "model_name": "Trajectory",
+            "back_populates": "flybys"
+          },
+          {
+            "relationship_name": "flyby_body",
+            "model_name": "Body",
+            "back_populates": ""
+          }
+        ]
+      ],
+      "title": "Relationships",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/relationships/items",
+        "default": {
+          "relationship_name": "relationship",
+          "model_name": "Model",
+          "back_populates": ""
+        },
+        "description": "A description of a relationship between this entity and another in the data model.",
+        "examples": [
+          {
+            "relationship_name": "target_body",
+            "model_name": "Body",
+            "back_populates": "trajectories"
+          },
+          {
+            "relationship_name": "trajectories",
+            "model_name": "Trajectory",
+            "back_populates": "target_body"
+          },
+          {
+            "relationship_name": "architecture",
+            "model_name": "Architecture",
+            "back_populates": ""
+          }
+        ],
+        "required": ["relationship_name", "model_name"],
+        "title": "Field",
+        "type": "object",
+        "properties": {
+          "relationship_name": {
+            "$id": "#/properties/relationships/items/properties/relationship_name",
+            "default": "relationship_name",
+            "description": "The name of the relationship as attached to the data model (used for programmatic access).",
+            "examples": ["target_body", "trajectories", "architecture"],
+            "title": "Relationship Name",
+            "type": "string"
+          },
+          "model_name": {
+            "$id": "#/properties/relationships/items/properties/model_name",
+            "default": "ModelName",
+            "description": "The name of the model mapped to this relationship.",
+            "examples": ["Body", "Trajectory", "Architecture"],
+            "title": "Model Name",
+            "type": "string"
+          },
+          "back_populates": {
+            "$id": "#/properties/relationships/items/properties/field_name",
+            "default": null,
+            "description": "The field that will be back-populated on the related model by this relationship. Empty string if relationship does not back-populate any attributes.",
+            "examples": ["trajectories", "target_body", "", null],
+            "title": "Back Populates",
+            "type": "string"
+          },
+          "order_by": {
+            "$id": "#/properties/relationships/items/properties/order_by",
+            "default": null,
+            "description": "Attribute on the mapped model to use for ordering populated relationship objects.",
+            "examples": ["Flyby.order", "", null],
+            "title": "Order By",
             "type": "string"
           }
         },

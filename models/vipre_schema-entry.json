@@ -12,7 +12,11 @@
       "filtering": "n/a",
       "computable": "n/a",
       "description": "ID of the Entry row in the database",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": true,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "body_id",
@@ -24,7 +28,11 @@
       "filtering": "n/a",
       "computable": "n/a",
       "description": "ID of the parent Body in the database",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "body.id",
+      "indexed": true
     },
     {
       "field_name": "trajectory_id",
@@ -36,31 +44,43 @@
       "filtering": "n/a",
       "computable": "no",
       "description": "ID of the parent Trajectory in the database",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "trajectory.id",
+      "indexed": true
     },
     {
       "field_name": "bvec_theta",
       "key": "",
       "short_name": "B-Plane vector angle",
       "datatype_range": "real(0-2pi)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3.456",
       "filtering": "slider (optional)",
       "computable": "yes",
       "description": "Angle on B-plane  for target arrival [rad]",
-      "units": "rad"
+      "units": "rad",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "bvec_mag",
       "key": "",
       "short_name": "B-Plane vector magnitude",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "9750.123",
       "filtering": "slider (optional)",
       "computable": "yes",
       "description": "Radial distance from body origin for target arrival [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "safe",
@@ -72,7 +92,11 @@
       "filtering": "default exclude",
       "computable": "no",
       "description": "Flag indicating whether trajectory avoids unsafe conditions (ring impact, etc)",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "t_entry",
@@ -84,199 +108,284 @@
       "filtering": "slider (optional)",
       "computable": "no",
       "description": "Time of atmospheric entry in seconds past J2000",
-      "units": "seconds"
+      "units": "seconds",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "pos_entry_x",
       "key": "",
       "short_name": "Spacecraft Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
       "description": "x component of spacecraft position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "pos_entry_y",
       "key": "",
       "short_name": "Spacecraft Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
       "description": "y component of spacecraft position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "pos_entry_z",
       "key": "",
       "short_name": "Spacecraft Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "slider (optional, may want to translate to lat/lon)",
       "computable": "no",
       "description": "z component of spacecraft position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "vel_entry_x",
       "key": "",
       "short_name": "Spacecraft Velocity @ entry X",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "20.971509",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
       "description": "x component of spacecraft relative entry velocity at time of entry [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "vel_entry_y",
       "key": "",
       "short_name": "Spacecraft Velocity @ entry Y",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "10.656459",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
       "description": "y component of spacecraft relative entry velocity  at time of entry [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "vel_entry_z",
       "key": "",
-      "short_name": "Spacecraft Velocity @ entry Y",
+      "short_name": "Spacecraft Velocity @ entry Z",
       "datatype_range": "real(-100 - 100.000000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-0.652681",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
       "description": "z component of spacecraft relative entry velocity at time of entry [km/s]",
-      "units": "km/s"
+      "units": "km/s",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "pos_sun_entry_x",
       "key": "",
       "short_name": "Sun Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of sun position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_sun_entry_y",
       "key": "",
       "short_name": "Sun Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of sun position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_sun_entry_z",
       "key": "",
       "short_name": "Sun Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of sun position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_earth_entry_x",
       "key": "",
       "short_name": "Earth Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of Earth position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_earth_entry_y",
       "key": "",
       "short_name": "EarthPosition @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of Earth position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_earth_entry_z",
       "key": "",
       "short_name": "Earth Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of Earth position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_entry_x",
       "key": "",
       "short_name": "Target Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "3903113883",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of target position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_entry_y",
       "key": "",
       "short_name": "Target Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "2155580575",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of target position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pos_target_entry_z",
       "key": "",
       "short_name": "Target Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-134323986",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of target position at time of entry [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "relay_volume",
       "key": "",
       "short_name": "Relay Data Volume",
       "datatype_range": "real(0-10000000000.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "???",
       "filtering": "slider (optional)",
       "computable": "no",
       "description": "Total data volume relayable by entry vehicle. Nullable",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": true
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_name": "target_body",
+      "model_name": "Body",
+      "back_populates": ""
+    },
+    {
+      "relationship_name": "trajectory",
+      "model_name": "Trajectory",
+      "back_populates": "entries"
+    },
+    {
+      "relationship_name": "maneuvers",
+      "model_name": "Maneuver",
+      "back_populates": "entry"
     }
   ]
 }

@@ -12,7 +12,11 @@
       "filtering": "n/a",
       "computable": "no",
       "description": "SQL body ID. Plan to use Horizons ID as this value to save space",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": true,
+      "foreign_key": "",
+      "indexed": true
     },
     {
       "field_name": "name",
@@ -24,79 +28,114 @@
       "filtering": "checkbox (target - default, flyby - optional)",
       "computable": "no",
       "description": "name of body",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "radius",
       "key": "",
       "short_name": "Radius",
       "datatype_range": "real (0-695700.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "6378.1366",
       "filtering": "n/a",
       "computable": "no",
       "description": "mean radius of body [km]",
-      "units": "km"
+      "units": "km",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "mu",
       "key": "",
       "short_name": "Gravity parameter",
       "datatype_range": "real (0-1.32710000e11)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "126686531.9",
       "filtering": "n/a",
       "computable": "no",
       "description": "gravity parameter [km^3/s^2]",
-      "units": "km^3/s^2"
+      "units": "km^3/s^2",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "period",
       "key": "",
       "short_name": "Rotation period",
       "datatype_range": "real (0-243.00)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "1.02595676",
       "filtering": "n/a",
       "computable": "no",
       "description": "body rotational period [days]",
-      "units": "days/rev"
+      "units": "days/rev",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pole_vec_x",
       "key": "",
       "short_name": "Pole vector X",
       "datatype_range": "real (-1 - 1.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "0.1224",
       "filtering": "n/a",
       "computable": "no",
       "description": "x component of body spin pole unit vector represented in EMO2000 frame",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pole_vec_y",
       "key": "",
       "short_name": "Pole vector Y",
       "datatype_range": "real (-1 - 1.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "-0.0310",
       "filtering": "n/a",
       "computable": "no",
       "description": "y component of body spin pole unit vector represented in EMO2000 frame",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     },
     {
       "field_name": "pole_vec_z",
       "key": "",
       "short_name": "Pole vector Z",
       "datatype_range": "real (-1 - 1.000)",
-      "sql_datatype": "REAL",
+      "sql_datatype": "FLOAT",
       "example_value": "0.9920",
       "filtering": "n/a",
       "computable": "no",
       "description": "z component of body spin pole unit vector represented in EMO2000 frame",
-      "units": ""
+      "units": "",
+      "nullable": false,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_name": "trajectories",
+      "model_name": "Trajectory",
+      "back_populates": "target_body"
     }
   ]
 }
