@@ -11,7 +11,7 @@
       "example_value": "599",
       "filtering": "n/a",
       "computable": "no",
-      "description": "SQL body ID. Plan to use Horizons ID as this value to save space",
+      "description": "corresponds to the ID in the NASA Horizons Database",
       "units": "",
       "nullable": false,
       "primary_key": true,
@@ -32,7 +32,7 @@
       "nullable": false,
       "primary_key": false,
       "foreign_key": "",
-      "indexed": false
+      "indexed": true
     },
     {
       "field_name": "radius",

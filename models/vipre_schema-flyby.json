@@ -11,7 +11,6 @@
       "example_value": "1",
       "filtering": "n/a",
       "computable": "no",
-      "description": "ID of the Flyby row in database",
       "units": "",
       "nullable": false,
       "primary_key": true,

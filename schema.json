@@ -187,7 +187,7 @@
             "$id": "#/properties/fields/items/properties/sql_datatype",
             "default": "TEXT",
             "description": "The SQL type used to capture values of this field.",
-            "enum": ["STRING", "TEXT", "INTEGER", "REAL", "FLOAT"],
+            "enum": ["TEXT", "INTEGER", "REAL", "FLOAT", "BOOLEAN"],
             "examples": ["INTEGER"],
             "title": "SQL datatype",
             "type": "string"
@@ -196,9 +196,9 @@
             "$id": "#/properties/fields/items/properties/example_value",
             "default": "",
             "description": "An example of a value captured by this field",
-            "examples": ["6", 6, 6.0],
+            "examples": ["6", 6, 6.0, false],
             "title": "Example value",
-            "type": ["string", "number", "integer"]
+            "type": ["string", "number", "integer", "boolean"]
           },
           "filtering": {
             "$id": "#/properties/fields/items/properties/filtering",

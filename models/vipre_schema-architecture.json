@@ -11,7 +11,6 @@
       "example_value": "6",
       "filtering": "checkbox (optional)",
       "computable": "n/a",
-      "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory",
       "units": "",
       "nullable": false,
       "primary_key": true,
