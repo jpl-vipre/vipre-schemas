@@ -4,7 +4,6 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Architecture ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
@@ -19,7 +18,6 @@
     },
     {
       "field_name": "sequence",
-      "key": "",
       "short_name": "Flyby Sequence",
       "datatype_range": "text",
       "sql_datatype": "TEXT",

@@ -4,7 +4,6 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Occultation ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
@@ -19,7 +18,6 @@
     },
     {
       "field_name": "trajectory_id",
-      "key": "FK",
       "short_name": "Trajectory ID",
       "datatype_range": "int(0-1000000)",
       "sql_datatype": "INTEGER",
@@ -35,7 +33,6 @@
     },
     {
       "field_name": "t_occ_in",
-      "key": "",
       "short_name": "Entry Time",
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",
@@ -51,7 +48,6 @@
     },
     {
       "field_name": "t_occ_out",
-      "key": "",
       "short_name": "Exit Time",
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",

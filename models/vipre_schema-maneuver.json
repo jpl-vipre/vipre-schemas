@@ -4,7 +4,6 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Maneuver ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
@@ -19,7 +18,6 @@
     },
     {
       "field_name": "entry_id",
-      "key": "FK",
       "short_name": "Entry ID",
       "datatype_range": "int",
       "sql_datatype": "INTEGER",
@@ -35,7 +33,6 @@
     },
     {
       "field_name": "maneuver_type",
-      "key": "",
       "short_name": "Maneuver Type",
       "datatype_range": "text",
       "sql_datatype": "TEXT",
@@ -51,7 +48,6 @@
     },
     {
       "field_name": "dv_maneuver",
-      "key": "",
       "short_name": "Maneuver DeltaV",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -67,7 +63,6 @@
     },
     {
       "field_name": "pos_man_x",
-      "key": "",
       "short_name": "Spacecraft Position @ maneuver X",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -83,7 +78,6 @@
     },
     {
       "field_name": "pos_man_y",
-      "key": "",
       "short_name": "Spacecraft Position @ maneuver Y",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -99,7 +93,6 @@
     },
     {
       "field_name": "pos_man_z",
-      "key": "",
       "short_name": "Spacecraft Position @ maneuver Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -115,7 +108,6 @@
     },
     {
       "field_name": "vel_man_x",
-      "key": "",
       "short_name": "Spacecraft Velocity @ maneuver X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -131,7 +123,6 @@
     },
     {
       "field_name": "vel_man_y",
-      "key": "",
       "short_name": "Spacecraft Velocity @ maneuver Y",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -147,7 +138,6 @@
     },
     {
       "field_name": "vel_man_z",
-      "key": "",
       "short_name": "Spacecraft Velocity @ maneuver Z",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",

@@ -4,7 +4,6 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Body ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
@@ -20,7 +19,6 @@
     },
     {
       "field_name": "name",
-      "key": "",
       "short_name": "Name",
       "datatype_range": "text",
       "sql_datatype": "TEXT",
@@ -36,7 +34,6 @@
     },
     {
       "field_name": "radius",
-      "key": "",
       "short_name": "Radius",
       "datatype_range": "real (0-695700.000)",
       "sql_datatype": "FLOAT",
@@ -52,7 +49,6 @@
     },
     {
       "field_name": "mu",
-      "key": "",
       "short_name": "Gravity parameter",
       "datatype_range": "real (0-1.32710000e11)",
       "sql_datatype": "FLOAT",
@@ -68,7 +64,6 @@
     },
     {
       "field_name": "period",
-      "key": "",
       "short_name": "Rotation period",
       "datatype_range": "real (0-243.00)",
       "sql_datatype": "FLOAT",
@@ -84,7 +79,6 @@
     },
     {
       "field_name": "pole_vec_x",
-      "key": "",
       "short_name": "Pole vector X",
       "datatype_range": "real (-1 - 1.000)",
       "sql_datatype": "FLOAT",
@@ -100,7 +94,6 @@
     },
     {
       "field_name": "pole_vec_y",
-      "key": "",
       "short_name": "Pole vector Y",
       "datatype_range": "real (-1 - 1.000)",
       "sql_datatype": "FLOAT",
@@ -116,7 +109,6 @@
     },
     {
       "field_name": "pole_vec_z",
-      "key": "",
       "short_name": "Pole vector Z",
       "datatype_range": "real (-1 - 1.000)",
       "sql_datatype": "FLOAT",
