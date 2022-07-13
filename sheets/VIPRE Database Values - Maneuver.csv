@@ -4,6 +4,7 @@ field_name,key,short_name,datatype_range,sql_datatype,example_value,filtering,co
 id,PK,Maneuver ID,text,TEXT,1,n/a,n/a,ID of the Maneuver row in database
 entry_id,FK,Entry ID,text,TEXT,1,n/a,n/a,ID of the parent Entry row in database
 maneuver_type,,Maneuver Type,text,TEXT,orbiter separation,checkbox (optional),yes,Type of maneuver performed to separate from entry vehicle. Nullable
+time_man,,Time of Maneuver,int(0-3153600000),INTEGER,916861248,n/a,no,Time that spacecraft performs maneuver in seconds past J2000. Nullable
 dv_maneuver_x,,Maneuver DeltaV X,real(-100 - 100.000000),REAL,10.656459,slider (optional),yes,Delta V of separation maneuver in X [km/s]. Nullable
 dv_maneuver_y,,Maneuver DeltaV Y,real(-100 - 100.000000),REAL,10.656459,slider (optional),yes,Delta V of separation maneuver in Y [km/s]. Nullable
 dv_maneuver_z,,Maneuver DeltaV Z,real(-100 - 100.000000),REAL,10.656459,slider (optional),yes,Delta V of separation maneuver in Z [km/s]. Nullable
