@@ -51,6 +51,22 @@
       "indexed": true
     },
     {
+      "field_name": "time_man",
+      "key": "",
+      "short_name": "",
+      "datatype_range": "",
+      "sql_datatype": "",
+      "example_value": "",
+      "filtering": "",
+      "computable": "",
+      "description": "",
+      "units": "",
+      "nullable": true,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
+    },
+    {
       "field_name": "dv_maneuver_x",
       "key": "",
       "short_name": "Maneuver DeltaV X",
