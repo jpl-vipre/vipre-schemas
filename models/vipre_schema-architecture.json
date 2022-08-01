@@ -4,14 +4,12 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Architecture ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
       "example_value": "6",
       "filtering": "checkbox (optional)",
       "computable": "n/a",
-      "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory",
       "units": "",
       "nullable": false,
       "primary_key": true,
@@ -20,7 +18,6 @@
     },
     {
       "field_name": "sequence",
-      "key": "",
       "short_name": "Flyby Sequence",
       "datatype_range": "text",
       "sql_datatype": "TEXT",

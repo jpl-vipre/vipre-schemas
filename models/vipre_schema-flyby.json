@@ -4,14 +4,12 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Flyby ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
       "example_value": "1",
       "filtering": "n/a",
       "computable": "no",
-      "description": "ID of the Flyby row in database",
       "units": "",
       "nullable": false,
       "primary_key": true,
@@ -20,7 +18,6 @@
     },
     {
       "field_name": "trajectory_id",
-      "key": "FK",
       "short_name": "Trajectory ID",
       "datatype_range": "int(0-100000)",
       "sql_datatype": "INTEGER",
@@ -36,7 +33,6 @@
     },
     {
       "field_name": "body_id",
-      "key": "FK",
       "short_name": "Body ID (first flyby)",
       "datatype_range": "int(0-1000)",
       "sql_datatype": "INTEGER",
@@ -52,7 +48,6 @@
     },
     {
       "field_name": "order",
-      "key": "",
       "short_name": "Flyby Order",
       "datatype_range": "int(0-100)",
       "sql_datatype": "INTEGER",
@@ -68,7 +63,6 @@
     },
     {
       "field_name": "t_flyby",
-      "key": "",
       "short_name": "Flyby date",
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",
@@ -84,7 +78,6 @@
     },
     {
       "field_name": "altitude",
-      "key": "",
       "short_name": "Flyby altitude",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -100,7 +93,6 @@
     },
     {
       "field_name": "v_inf_in_x",
-      "key": "",
       "short_name": "Incoming V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -116,7 +108,6 @@
     },
     {
       "field_name": "v_inf_in_y",
-      "key": "",
       "short_name": "Incoming V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -132,7 +123,6 @@
     },
     {
       "field_name": "v_inf_in_z",
-      "key": "",
       "short_name": "Incoming V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -148,7 +138,6 @@
     },
     {
       "field_name": "v_inf_out_x",
-      "key": "",
       "short_name": "Outgoing V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -164,7 +153,6 @@
     },
     {
       "field_name": "v_inf_out_y",
-      "key": "",
       "short_name": "Outgoing V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -180,7 +168,6 @@
     },
     {
       "field_name": "v_inf_out_z",
-      "key": "",
       "short_name": "Outgoing V infinity Vector X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",

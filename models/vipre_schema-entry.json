@@ -4,14 +4,12 @@
   "fields": [
     {
       "field_name": "id",
-      "key": "PK",
       "short_name": "Entry ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
       "example_value": "1",
       "filtering": "n/a",
       "computable": "n/a",
-      "description": "ID of the Entry row in the database",
       "units": "",
       "nullable": false,
       "primary_key": true,
@@ -20,7 +18,6 @@
     },
     {
       "field_name": "body_id",
-      "key": "FK",
       "short_name": "Body ID",
       "datatype_range": "int(0-100000)",
       "sql_datatype": "INTEGER",
@@ -36,7 +33,6 @@
     },
     {
       "field_name": "trajectory_id",
-      "key": "FK",
       "short_name": "Trajectory ID",
       "datatype_range": "int(0-100000)",
       "sql_datatype": "INTEGER",
@@ -52,14 +48,13 @@
     },
     {
       "field_name": "bvec_theta",
-      "key": "",
       "short_name": "B-Plane vector angle",
       "datatype_range": "real(0-2pi)",
       "sql_datatype": "FLOAT",
       "example_value": "3.456",
       "filtering": "slider (optional)",
       "computable": "yes",
-      "description": "Angle on B-plane  for target arrival [rad]",
+      "description": "Angle on B-plane for target arrival [rad]",
       "units": "rad",
       "nullable": false,
       "primary_key": false,
@@ -68,7 +63,6 @@
     },
     {
       "field_name": "bvec_mag",
-      "key": "",
       "short_name": "B-Plane vector magnitude",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -84,11 +78,10 @@
     },
     {
       "field_name": "safe",
-      "key": "",
       "short_name": "Safe Entry Trajectory Flag",
-      "datatype_range": "int(0-1)",
-      "sql_datatype": "INTEGER",
-      "example_value": "1",
+      "datatype_range": "boolean(0,1)",
+      "sql_datatype": "BOOLEAN",
+      "example_value": true,
       "filtering": "default exclude",
       "computable": "no",
       "description": "Flag indicating whether trajectory avoids unsafe conditions (ring impact, etc)",
@@ -100,7 +93,6 @@
     },
     {
       "field_name": "t_entry",
-      "key": "",
       "short_name": "Time of Entry",
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",
@@ -116,7 +108,6 @@
     },
     {
       "field_name": "pos_entry_x",
-      "key": "",
       "short_name": "Spacecraft Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -132,7 +123,6 @@
     },
     {
       "field_name": "pos_entry_y",
-      "key": "",
       "short_name": "Spacecraft Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -148,7 +138,6 @@
     },
     {
       "field_name": "pos_entry_z",
-      "key": "",
       "short_name": "Spacecraft Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -164,7 +153,6 @@
     },
     {
       "field_name": "vel_entry_x",
-      "key": "",
       "short_name": "Spacecraft Velocity @ entry X",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -180,14 +168,13 @@
     },
     {
       "field_name": "vel_entry_y",
-      "key": "",
       "short_name": "Spacecraft Velocity @ entry Y",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
       "example_value": "10.656459",
       "filtering": "slider (optional, may want to translate to angles and magnitude)",
       "computable": "no",
-      "description": "y component of spacecraft relative entry velocity  at time of entry [km/s]",
+      "description": "y component of spacecraft relative entry velocity at time of entry [km/s]",
       "units": "km/s",
       "nullable": false,
       "primary_key": false,
@@ -196,7 +183,6 @@
     },
     {
       "field_name": "vel_entry_z",
-      "key": "",
       "short_name": "Spacecraft Velocity @ entry Z",
       "datatype_range": "real(-100 - 100.000000)",
       "sql_datatype": "FLOAT",
@@ -212,7 +198,6 @@
     },
     {
       "field_name": "pos_sun_entry_x",
-      "key": "",
       "short_name": "Sun Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -228,7 +213,6 @@
     },
     {
       "field_name": "pos_sun_entry_y",
-      "key": "",
       "short_name": "Sun Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -244,7 +228,6 @@
     },
     {
       "field_name": "pos_sun_entry_z",
-      "key": "",
       "short_name": "Sun Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -260,7 +243,6 @@
     },
     {
       "field_name": "pos_earth_entry_x",
-      "key": "",
       "short_name": "Earth Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -276,7 +258,6 @@
     },
     {
       "field_name": "pos_earth_entry_y",
-      "key": "",
       "short_name": "EarthPosition @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -292,7 +273,6 @@
     },
     {
       "field_name": "pos_earth_entry_z",
-      "key": "",
       "short_name": "Earth Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -308,7 +288,6 @@
     },
     {
       "field_name": "pos_target_entry_x",
-      "key": "",
       "short_name": "Target Position @ entry X",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -324,7 +303,6 @@
     },
     {
       "field_name": "pos_target_entry_y",
-      "key": "",
       "short_name": "Target Position @ entry Y",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -340,7 +318,6 @@
     },
     {
       "field_name": "pos_target_entry_z",
-      "key": "",
       "short_name": "Target Position @ entry Z",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
@@ -356,16 +333,15 @@
     },
     {
       "field_name": "relay_volume",
-      "key": "",
       "short_name": "Relay Data Volume",
       "datatype_range": "real(0-10000000000.000)",
       "sql_datatype": "FLOAT",
       "example_value": "???",
       "filtering": "slider (optional)",
       "computable": "no",
-      "description": "Total data volume relayable by entry vehicle. Nullable",
+      "description": "Total data volume relayable by entry vehicle.",
       "units": "",
-      "nullable": false,
+      "nullable": true,
       "primary_key": false,
       "foreign_key": "",
       "indexed": true
