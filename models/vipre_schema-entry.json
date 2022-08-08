@@ -365,7 +365,7 @@
       "field_name": "carrier_orbit",
       "short_name": "	Orbit of carrier before probe release",
       "datatype_range": "string",
-      "sql_datatype": "VARCHAR",
+      "sql_datatype": "TEXT",
       "example_value": "flyby",
       "filtering": "checkbox",
       "computable": "yes",
