@@ -367,7 +367,7 @@
       "datatype_range": "string",
       "sql_datatype": "VARCHAR",
       "example_value": "flyby",
-      "filtering": "checkboxes",
+      "filtering": "checkbox",
       "computable": "yes",
       "description": "label describing the pre-divert orbit. Primarily used to distinguish between flyby and orbitting probe releases.",
       "units": "",
