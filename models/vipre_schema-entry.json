@@ -351,7 +351,7 @@
       "short_name": "Ring-Shadowed Entry",
       "datatype_range": "bool(0-1)",
       "sql_datatype": "BOOLEAN",
-      "example_value": false
+      "example_value": false,
       "filtering": "radio button or slider",
       "computable": "no",
       "description": "true if the entry is in the shadow of a planet's ring",
