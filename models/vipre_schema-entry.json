@@ -340,11 +340,41 @@
       "filtering": "slider (optional)",
       "computable": "no",
       "description": "Total data volume relayable by entry vehicle.",
-      "units": "",
+      "units": "kb",
       "nullable": true,
       "primary_key": false,
       "foreign_key": "",
       "indexed": true
+    },
+    {
+      "field_name": "ring_shadow",
+      "short_name": "Ring-Shadowed Entry",
+      "datatype_range": "bool(0-1)",
+      "sql_datatype": "BOOLEAN",
+      "example_value": false
+      "filtering": "radio button or slider",
+      "computable": "no",
+      "description": "true if the entry is in the shadow of a planet's ring",
+      "units": "kb",
+      "nullable": true,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
+    },
+    {
+      "field_name": "carrier_orbit",
+      "short_name": "Carrier Orbit",
+      "datatype_range": "string",
+      "sql_datatype": "TEXT",
+      "example_value": "flyby",
+      "filtering": "checkbox",
+      "computable": "yes",
+      "description": "label describing the pre-divert orbit. Primarily used to distinguish between flyby and orbitting probe releases.",
+      "units": "",
+      "nullable": true,
+      "primary_key": false,
+      "foreign_key": "",
+      "indexed": false
     }
   ],
   "relationships": [

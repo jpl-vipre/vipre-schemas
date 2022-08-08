@@ -23,4 +23,6 @@ pos_earth_entry_z,,Earth Position @ entry Z,real(0-10000000000.000),REAL,-134323
 pos_target_entry_x,,Target Position @ entry X,real(0-10000000000.000),REAL,3903113883,n/a,no,x component of target position at time of entry [km]
 pos_target_entry_y,,Target Position @ entry Y,real(0-10000000000.000),REAL,2155580575,n/a,no,y component of target position at time of entry [km]
 pos_target_entry_z,,Target Position @ entry Z,real(0-10000000000.000),REAL,-134323986,n/a,no,z component of target position at time of entry [km]
-relay_volume,,Relay Data Volume,real(0-10000000000.000),REAL,???,slider (optional),no,Total data volume relayable by entry vehicle. Nullable
+relay_volume,,Relay Data Volume,real(0-10000000000.000),REAL,2.45e-3,slider (optional),no,Total data volume relayable by entry vehicle. Data volume is normalized to 1 kilabit per second. Within the GUI the user will scale to match the data rate of their probe (default value 6e10). Nullable
+ring_shadow,,Entry in shadow of planet ring, bool (0-1),BOOL,0,radio button or slide,no,1 if the entry is in the shadow of a planet's ring
+carrier_orbit,,Orbit of carrier before probe release,string,VARCHAR, 'flyby',checkboxes,yes,label describing the pre-divert orbit. Primarily used to distinguish between flyby and orbitting probe releases.
