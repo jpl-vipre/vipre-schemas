@@ -354,7 +354,7 @@
       "example_value": "0",
       "filtering": "radio button or slider",
       "computable": "no",
-      "description": "1 if the entry is in the shadow of a planet's ring",
+      "description": "true if the entry is in the shadow of a planet's ring",
       "units": "kb",
       "nullable": true,
       "primary_key": false,
