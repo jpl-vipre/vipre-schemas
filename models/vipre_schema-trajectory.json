@@ -137,7 +137,7 @@
       "indexed": true
     },
     {
-      "field_name": "dv_total",
+      "field_name": "interplanetary_dv",
       "short_name": "Total Cruise DeltaV",
       "datatype_range": "real (0-100.000000)",
       "sql_datatype": "FLOAT",
