@@ -106,7 +106,6 @@
       ],
       "title": "Fields",
       "type": "array",
-      "additionalItems": true,
       "items": {
         "$id": "#/properties/fields/items",
         "default": {
@@ -172,7 +171,6 @@
             "description": "A short name used for displaying this field to users",
             "examples": ["Architecture ID"],
             "title": "Short name",
-            "maxItems": 0,
             "type": "string"
           },
           "datatype_range": {
@@ -198,7 +196,12 @@
             "description": "An example of a value captured by this field",
             "examples": ["6", 6, 6.0, false],
             "title": "Example value",
-            "type": ["string", "number", "integer", "boolean"]
+            "anyOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
           },
           "filtering": {
             "$id": "#/properties/fields/items/properties/filtering",
@@ -297,7 +300,6 @@
       ],
       "title": "Relationships",
       "type": "array",
-      "additionalItems": true,
       "items": {
         "$id": "#/properties/relationships/items",
         "default": {

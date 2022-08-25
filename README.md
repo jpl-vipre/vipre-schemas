@@ -15,17 +15,21 @@ track metadata/notes.
 ├── schema.json                                     A standard json schema document defining the data-model schemas
 └── sheets/                                         The csv files extracted from collaborative google sheet used to define
     :                                                 initial data models (kept only for archive purposes; no longer used)
-    ├── VIPRE Database Values - Architecture.csv    
+    ├── VIPRE Database Values - Architecture.csv
     └── VIPRE Database Values - *.csv
 ```
 
 ## Schema
 
+To validate all the data models against the json schema, run the following:
+
+```shell
+npx ajv-cli validate -s schema.json -d "models/*.json" --strict=false
+```
+
 The schema files (`vipre_schema-<tablename>.json`) conform to the following structure:
 
-In short:
-
-```json5
+```json
 {
   "tablename": "name of the table in database for this schema",
   "note": "explanation of this data model and its role in the database/application",
