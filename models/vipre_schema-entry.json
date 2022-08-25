@@ -451,7 +451,7 @@
       "foreign_key": "",
       "indexed": false
     },
-        {
+    {
       "field_name": "rot_vel_entry_x",
       "short_name": "Spacecraft Velocity @ entry X in planet rotating frame",
       "datatype_range": "real(-100 - 100.000000)",
@@ -567,6 +567,11 @@
       "relationship_name": "trajectory",
       "model_name": "Trajectory",
       "back_populates": "entries"
+    },
+    {
+      "relationship_name": "datarates",
+      "model_name": "Datarate",
+      "back_populates": "entry"
     },
     {
       "relationship_name": "maneuvers",
