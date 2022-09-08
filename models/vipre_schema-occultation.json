@@ -1,5 +1,6 @@
 {
   "tablename": "occultation",
+  "model_name": "Occultation",
   "note": "Stores Earth occultations by the target body of the spacecraft that occur on approach to target body",
   "fields": [
     {
@@ -37,7 +38,7 @@
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",
       "example_value": "916861248",
-      "filtering": "checkbox (optional, not clear how this would be implemented",
+      "filtering": "n/a",
       "computable": "no",
       "description": "Time that spacecraft enters into occultation relative to the Earth in seconds past J2000.",
       "units": "seconds",
@@ -52,7 +53,7 @@
       "datatype_range": "int(0-3153600000)",
       "sql_datatype": "INTEGER",
       "example_value": "916861248",
-      "filtering": "checkbox (optional, not clear how this would be implemented",
+      "filtering": "n/a",
       "computable": "no",
       "description": "Time that spacecraft exits occultation relative to the Earth in seconds past J2000.",
       "units": "seconds",
@@ -62,7 +63,6 @@
       "indexed": false
     }
   ],
-  "model_name": "Occultation",
   "relationships": [
     {
       "relationship_name": "trajectory",
