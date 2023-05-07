@@ -95,7 +95,7 @@
             "field_name": "sequence",
             "key": "",
             "short_name": "Flyby Sequence",
-            "datatype_range": "varchar(255)",
+            "datatype_range": "text",
             "sql_datatype": "TEXT",
             "example_value": "\"599-599-699\"",
             "filtering": "checkbox (optional, unlikely to be needed)",
@@ -110,38 +110,48 @@
         "$id": "#/properties/fields/items",
         "default": {
           "field_name": "id",
-          "key": "PK",
-          "short_name": "Model ID",
-          "datatype_range": "int(0-1000)",
+          "short_name": "Architecture ID",
+          "datatype_range": "Sequence",
           "sql_datatype": "INTEGER",
-          "example_value": "6",
-          "filtering": "n/a",
+          "example_value": 6,
+          "filtering": "slider",
           "computable": "n/a",
-          "description": "SQL ID for this model"
+          "units": "",
+          "nullable": false,
+          "primary_key": true,
+          "foreign_key": "",
+          "indexed": true
         },
         "description": "A field available on the data model; maps to an attribute on the ORM model or a column in the database.",
         "examples": [
           {
             "field_name": "id",
-            "key": "PK",
             "short_name": "Architecture ID",
-            "datatype_range": "int(0-1000)",
+            "datatype_range": "Sequence",
             "sql_datatype": "INTEGER",
-            "example_value": "6",
-            "filtering": "checkbox (optional)",
+            "example_value": 6,
+            "filtering": "slider",
             "computable": "n/a",
-            "description": "SQL architecture ID indicating the grouping trajectories based on flyby bodies and their order in the interplanetary trajectory"
+            "units": "",
+            "nullable": false,
+            "primary_key": true,
+            "foreign_key": "",
+            "indexed": true
           },
           {
             "field_name": "sequence",
-            "key": "",
             "short_name": "Flyby Sequence",
-            "datatype_range": "varchar(255)",
+            "datatype_range": "text",
             "sql_datatype": "TEXT",
-            "example_value": "\"599-599-699\"",
-            "filtering": "checkbox (optional, unlikely to be needed)",
+            "example_value": "399 - 299 - 299 - 399 - 699",
+            "filtering": "checkbox",
             "computable": "no",
-            "description": "SQL body IDs of the flybys in order"
+            "description": "SQL body IDs of the flybys in order",
+            "units": "",
+            "nullable": false,
+            "primary_key": false,
+            "foreign_key": "",
+            "indexed": true
           }
         ],
         "required": ["field_name", "short_name", "sql_datatype"],
@@ -154,15 +164,6 @@
             "description": "The identifier of this field on the data object or the name of the column in the database.",
             "examples": ["id"],
             "title": "Programmatic field name",
-            "type": "string"
-          },
-          "key": {
-            "$id": "#/properties/fields/items/properties/key",
-            "default": "",
-            "description": "The type of key for which this field is used; e.g. foreign or primary key.",
-            "enum": ["PK", "FK", ""],
-            "examples": ["PK"],
-            "title": "Key usage",
             "type": "string"
           },
           "short_name": {
@@ -205,15 +206,16 @@
           },
           "filtering": {
             "$id": "#/properties/fields/items/properties/filtering",
-            "default": "",
+            "default": "n/a",
             "description": "Captures whether this field is used for filtering data in the application or database",
-            "examples": ["checkbox (optional)"],
+            "examples": ["checkbox"],
             "title": "Filtering needs",
-            "type": "string"
+            "type": "string",
+            "enum": ["checkbox", "slider", "date", "n/a"]
           },
           "computable": {
             "$id": "#/properties/fields/items/properties/computable",
-            "default": "",
+            "default": "no",
             "description": "Whether this field is computable on the backend (on-the-fly) or will only be kept in the database (pre-computed).",
             "examples": ["n/a", "no", "yes"],
             "title": "Computable",
@@ -234,7 +236,7 @@
             "$id": "#/properties/fields/items/properties/units",
             "default": "",
             "description": "The units used to measure the field's value where applicable.",
-            "examples": ["km/s"],
+            "examples": ["km/s", "AU", "rad"],
             "title": "Units",
             "type": "string"
           },
@@ -250,7 +252,7 @@
             "$id": "#/properties/fields/items/properties/foreign_key",
             "default": "",
             "description": "Reference to a `table.column` if this field is used as a foreign key in the database; empty otherwise",
-            "examples": ["architecture.id", ""],
+            "examples": ["architecture.id", "body.id"],
             "title": "Foreign Key",
             "type": "string"
           },
@@ -302,11 +304,11 @@
       "type": "array",
       "items": {
         "$id": "#/properties/relationships/items",
-        "default": {
+        "default": [{
           "relationship_name": "relationship",
           "model_name": "Model",
           "back_populates": ""
-        },
+        }],
         "description": "A description of a relationship between this entity and another in the data model.",
         "examples": [
           {

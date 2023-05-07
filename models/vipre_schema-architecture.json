@@ -1,5 +1,6 @@
 {
   "tablename": "architecture",
+  "model_name": "Architecture",
   "note": "Categorization of trajectories based on the flyby bodies and order in the interplanetary trajectory",
   "fields": [
     {
@@ -7,8 +8,8 @@
       "short_name": "Architecture ID",
       "datatype_range": "Sequence",
       "sql_datatype": "INTEGER",
-      "example_value": "6",
-      "filtering": "checkbox (optional)",
+      "example_value": 6,
+      "filtering": "checkbox",
       "computable": "n/a",
       "units": "",
       "nullable": false,
@@ -21,8 +22,8 @@
       "short_name": "Flyby Sequence",
       "datatype_range": "text",
       "sql_datatype": "TEXT",
-      "example_value": "\"599-599-699\"",
-      "filtering": "checkbox (optional, unlikely to be needed)",
+      "example_value": "399 - 299 - 299 - 399 - 699",
+      "filtering": "checkbox",
       "computable": "no",
       "description": "SQL body IDs of the flybys in order",
       "units": "",
